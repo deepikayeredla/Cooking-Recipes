@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Culinary Recipe Database</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>COOKING RECIPES</h1>
+            <div class="auth-section">
+                <button id="loginBtn">Login</button>
+                <button id="signupBtn">Sign Up</button>
+            </div>
+        </div>
+        
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search recipes...">
+        </div>
+        
+        <div class="cuisine-filter">
+            <div class="cuisine-tags">
+                <span class="cuisine-tag active" data-category="all">All</span>
+                <span class="cuisine-tag" data-category="Indian">Indian</span>
+                <span class="cuisine-tag" data-category="Italian">Italian</span>
+                <span class="cuisine-tag" data-category="Mexican">Mexican</span>
+                <span class="cuisine-tag" data-category="Japanese">Japanese</span>
+                <span class="cuisine-tag" data-category="Korean">Korean</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="recipes-container" id="recipesGrid">
+        <!-- Recipe Cards with Images -->
+        <div class="recipe-card" data-category="indian">
+            <img src="images/Masala-Dosa.jpg" alt="Masala Dosa" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Masala Dosa</h3>
+                
+                <span class="cuisine-tag">Indian</span>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="mexican">
+            <img src="images/Black Bean & Corn Salad.jpg" alt="Black Bean & Corn Salad" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Black Bean & Corn Salad</h3>
+                
+                <span class="cuisine-tag">Mexican</span>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="mexican">
+            <img src="images/Bread Roll Recipe.jpg" alt="Bread Roll Recipe" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Bread Roll Recipe</h3>
+                
+                <span class="cuisine-tag">Mexican</span>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="italian">
+            <img src="images/margherita-pizza.jpg" alt="Margherita Pizza" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Margherita Pizza</h3>
+                
+                <span class="cuisine-tag">Italian</span>
+            </div>
+        </div>
+
+        <div class="recipe-card" data-category="indian">
+            <img src="images/Samosa.jpg" alt="Samosa" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Samosa</h3>
+                
+                <span class="cuisine-tag">Indian</span>
+            </div>
+        </div>
+
+        <div class="recipe-card" data-category="dessert">
+            <img src="images/Mochi.jpg" alt="Mochi" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Mochi</h3>
+                
+                <span class="cuisine-tag">Japanese</span>
+            </div>
+        </div>
+
+        <div class="recipe-card" data-category="dessert">
+            <img src="images/churros.jpg" alt="Churros" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Churros</h3>
+                
+                <span class="cuisine-tag">Dessert</span>
+            </div>
+        </div>
+
+        <div class="recipe-card" data-category="Italian">
+            <img src="images/Bruschetta.jpg" alt="Bruschetta" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Bruschetta</h3>
+                
+                <span class="cuisine-tag">Italian</span>
+            </div>
+        </div>
+
+        <div class="recipe-card" data-category="Japanese">
+            <img src="images/Gyoza.jpg" alt="Gyoza" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Gyoza</h3>
+                
+                <span class="cuisine-tag">Japanese</span>
+            </div>
+        </div>
+
+        <div class="recipe-card" data-category="Mexican">
+            <img src="images/Chicken Tacos.jpg" alt="Chicken Tacos" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Chicken Tacos</h3>
+                
+                <span class="cuisine-tag">Mexican</span>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="Italian">
+            <img src="images/Bean & Cheese Taquitos.jpg" alt="Bean & Cheese Taquitos" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Bean & Cheese Taquitos</h3>
+                
+                <span class="cuisine-tag">Italian</span>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="Korean">
+            <img src="images/Bibimbap.jpg" alt="Bibimbap" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Bibimbap</h3>
+               
+                <span class="cuisine-tag">Korean</span>
+            </div>
+        </div>
+        
+        <div class="recipe-card" data-category="Indian">
+            <img src="images/Butter Chicken.jpg" alt="Butter Chicken" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Butter Chicken</h3>
+      
+                <span class="cuisine-tag">Indian</span>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="Italian">
+            <img src="images/Caprese Salad.jpg" alt="Caprese Salad" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Caprese Salad</h3>
+                
+                <span class="cuisine-tag">Italian</span>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="Mexican">
+            <img src="images/Chalupas.jpg" alt="Chalupas" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Chalupas</h3>
+  
+                <span class="cuisine-tag">Mexican</span>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="Mexican">
+            <img src="images/Chicken Enchilada Dip.jpg" alt="Chicken Enchilada Dip" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Chicken Enchilada Dip</h3>
+               
+                <span class="cuisine-tag">Mexican</span>
+            </div>
+        </div>
+        
+        <div class="recipe-card" data-category="Indian">
+            <img src="images/Corn Pakoda Recipe (Corn Bhajiya).jpg" alt="Corn Pakoda" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Corn Pakoda</h3>
+                
+                <span class="cuisine-tag">Indian</span>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="Indian">
+            <img src="images/Dill Leaves Pakoda.jpg" alt="Dill Leaves Pakoda" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Dill Leaves Pakoda</h3>
+               
+                <span class="cuisine-tag">Indian</span>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="Japanese">
+            <img src="images/Donburi.jpg" alt="Donburi" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Donburi</h3>
+           
+                <span class="cuisine-tag">Japanese</span>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="Italian">
+            <img src="images/Easy Bruschetta.jpg" alt="Easy Bruschetta" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Easy Bruschetta</h3>
+               
+                <span class="cuisine-tag">italian</span>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="Italian">
+            <img src="images/Easy Mussels Marinara.jpg" alt="Easy Mussels Marinara" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Easy Mussels Marinara</h3>
+               
+                <span class="cuisine-tag">Italian</span>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="Italian">
+            <img src="images/Easy Stuffed Shells.jpg" alt="Easy Stuffed Shells" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Easy Stuffed Shells</h3>
+                
+                <span class="cuisine-tag">Italian</span>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="Italian">
+            <img src="images/Eggplant Caponata.jpg" alt="Eggplant Caponata" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Eggplant Caponata</h3>
+                
+                <span class="cuisine-tag">Italian</span>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="Mexican">
+            <img src="images/Esquites Fritters.jpg" alt="Esquites Fritters" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Esquites Fritters</h3>
+            
+                <span class="cuisine-tag">Mexican</span>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="Italian">
+            <img src="images/Flatbread Pizza.jpg" alt="Flatbread Pizza" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Flatbread Pizza</h3>
+                
+                <span class="cuisine-tag">Italian</span>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="Mexican">
+            <img src="images/Grilled Chicken Street Tacos.jpg" alt="Grilled Chicken Street Tacos" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Grilled Chicken Street Tacos</h3>
+                
+                <span class="cuisine-tag">Mexican</span>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="Mexican">
+            <img src="images/Guacamole.jpg" alt="Guacamole" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Guacamole</h3>
+              
+                <span class="cuisine-tag">Mexican</span>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="Indian">
+            <img src="images/Gulab Jamun.jpg" alt="Gulab Jamun" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Gulab Jamun</h3>
+             
+                <span class="cuisine-tag">Indian</span>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="Indian">
+            <img src="images/Indian Tomato Soup.jpg" alt="Indian Tomato Soup" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Indian Tomato Soup</h3>
+              
+                <span class="cuisine-tag">Indian</span>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="Korean">
+            <img src="images/Kimchi Jjigae.jpg" alt="Kimchi Jjigae" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Kimchi Jjigae</h3>
+             
+                <span class="cuisine-tag">Korean</span>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="Indian">
+            <img src="images/Lauki Soup.jpg" alt="Lauki Soup" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Lauki Soup</h3>
+                
+                <span class="cuisine-tag">Indian</span>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="Italian">
+            <img src="images/Marinated Mushrooms.jpg" alt="Marinated Mushrooms" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Marinated Mushrooms</h3>
+    
+                <span class="cuisine-tag">Italian</span>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="Italian">
+            <img src="images/Marinated Olives.jpg" alt="Marinated Olives" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Marinated Olives</h3>
+                
+                <span class="cuisine-tag">Italian</span>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="Mexican">
+            <img src="images/Mexican Street Corn Flatbread.jpg" alt="Mexican Street Corn Flatbread" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Mexican Street Corn Flatbread</h3>
+                
+                <span class="cuisine-tag">Mexican</span>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="Mexican">
+            <img src="images/Mexican Street Corn.jpg" alt="Mexican Street Corn" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Mexican Street Corn</h3>
+                
+                <span class="cuisine-tag">Mexican</span>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="Italian">
+            <img src="images/Minestrone Soup.jpg" alt="Minestrone Soup" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Minestrone Soup</h3>
+               
+                <span class="cuisine-tag">Italian</span>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="Indian">
+            <img src="images/Mixed Vegetable Soup.jpg" alt="Mixed Vegetable Soup" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Mixed Vegetable Soup</h3>
+                
+                <span class="cuisine-tag">Indian</span>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="Japanese">
+            <img src="images/Mochi.jpg" alt="Mochi" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Mochi</h3>
+                
+                <span class="cuisine-tag">Japanese</span>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="Mexican">
+            <img src="images/Nachos Supreme.jpg" alt="Nachos Supreme" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Nachos Supreme</h3>
+                
+                <span class="cuisine-tag">Mexican</span>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="Japanese">
+            <img src="images/Natto.jpg" alt="Natto" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Natto</h3>
+
+                <span class="cuisine-tag">Japanese</span>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="Japanese">
+            <img src="images/Oden,.jpg" alt="Oden" class="recipe-image">
+            <div class="recipe-details">
+                <h3>oden</h3>
+               
+                <span class="cuisine-tag">Japanese</span>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="Indian">
+            <img src="images/Paneer Pakora.jpg" alt="Paneer Pakora" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Paneer Pakora</h3>
+               
+                <span class="cuisine-tag">Indian</span>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="Indian">
+            <img src="images/Paneer Tikka (Oven & Stovetop).jpg" alt="Paneer Tikka" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Paneer Tikka</h3>
+                
+                <span class="cuisine-tag">Indian</span>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="Indian">
+            <img src="images/Parmesan Crusted Potatoes.jpg" alt="Parmesan Crusted Potatoes" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Parmesan Crusted Potatoes</h3>
+                
+                <span class="cuisine-tag">Indian</span>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="Italian">
+            <img src="images/Pasta Puttanesca Recipe.jpg" alt="Pasta Puttanesca Recipe" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Pasta Puttanesca Recipe</h3>
+                
+                <span class="cuisine-tag">Italian</span>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="Mexican">
+            <img src="images/Perfect Fish Tacos.jpg" alt="Perfect Fish Tacos" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Perfect Fish Tacos</h3>
+                
+                <span class="cuisine-tag">Mexican</span>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="Italian">
+            <img src="images/Pomodoro Sauce.jpg" alt="Pomodoro Sauce" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Pomodoro Sauce</h3>
+                
+                <span class="cuisine-tag">Italian</span>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="Japanese">
+            <img src="images/Ramen.jpg" alt="Ramen" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Ramen</h3>
+                
+                <span class="cuisine-tag">Japanese</span>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="Indian">
+            <img src="images/Sabudana Tikki.jpg" alt="Sabudana Tikki" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Sabudana Tikki</h3>
+                
+                <span class="cuisine-tag">Indian</span>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="Japanese">
+            <img src="images/Sashimi.jpg" alt="Sashimi" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Sashimi</h3>
+                
+                <span class="cuisine-tag">Japanese</span>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="Indiann">
+            <img src="images/Sev Puri (Sev Batata Puri).jpg" alt="Sev Puri" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Sev Puri</h3>
+                
+                <span class="cuisine-tag">Indian</span>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="Mexican">
+            <img src="images/Shrimp Tostada Bites.jpg" alt="Shrimp Tostada Bites" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Shrimp Tostada Bites</h3>
+                
+                <span class="cuisine-tag">Mexican</span>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="Japanese">
+            <img src="images/Soba.jpg" alt="Soba" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Soba</h3>
+                
+                <span class="cuisine-tag">Japanese</span>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="Mexican">
+            <img src="images/Sopes.jpg" alt="Sopes" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Sopes</h3>
+                
+                <span class="cuisine-tag">Mexican</span>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="Mexican">
+            <img src="images/Spicy Chicken Taquitos.jpg" alt="Spicy Chicken Taquitos" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Spicy Chicken Taquitos</h3>
+      
+                <span class="cuisine-tag">Mexican</span>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="Korean">
+            <img src="images/Spring Rolls.jpg" alt="Spring Rolls" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Spring Rolls</h3>
+                
+                <span class="cuisine-tag">Korean</span>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="Japanese">
+            <img src="images/Sukiyaki.jpg" alt="Sukiyaki" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Sukiyaki</h3>
+                <span class="cuisine-tag">Japanese</span>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="Japanese">
+            <img src="images/Sushi Rolls.jpg" alt="Sushi Rolls" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Sushi Rolls</h3>
+               
+                <span class="cuisine-tag">Japanese</span>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="Japanese">
+            <img src="images/Sushi.jpg" alt="Sushi" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Sushi</h3>
+                
+                <span class="cuisine-tag">Japanese</span>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="Indian">
+            <img src="images/Sweet Potato Tikki.jpg" alt="Sweet Potato Tikki" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Sweet Potato Tikki</h3>
+                
+                <span class="cuisine-tag">Indian</span>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="Japanese">
+            <img src="images/Tamagoyaki.jpg" alt="Tamagoyaki" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Tamagoyaki</h3>
+                
+                <span class="cuisine-tag">Japanese</span>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="Japanese">
+            <img src="images/Tempura.jpg" alt="Tempura" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Tempura</h3>
+                
+                <span class="cuisine-tag">Japanese</span>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="Japanese">
+            <img src="images/Tiramisu.jpg" alt="Tiramisu" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Tiramisu</h3>
+                <span class="cuisine-tag">Japanese</span>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="Japanese">
+            <img src="images/Tonkatsu.jpg" alt="Tonkatsu" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Tonkatsu</h3>
+                <span class="cuisine-tag">Japanese</span>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="Italian">
+            <img src="images/Tortellini Soup.jpg" alt="Tortellini Soup" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Tortellini Soup</h3>
+                
+                <span class="cuisine-tag">Mexican</span>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="Japanese">
+            <img src="images/Udon Tofu.jpg" alt="Udon Tofu" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Udon Tofu</h3>
+                
+                <span class="cuisine-tag">Japanese</span>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="Indian">
+            <img src="images/Veg Manchow Soup.jpg" alt="Veg Manchow Soup" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Veg Manchow Soup</h3>
+               
+                <span class="cuisine-tag">Indian</span>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="Indian">
+            <img src="images/Veg Manchurian Dry.jpg" alt="Veg Manchurian Dry" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Veg Manchurian Dry</h3>
+                
+                <span class="cuisine-tag">Indian</span>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="Japanese">
+            <img src="images/Yakitori.jpg" alt="Yakitori" class="recipe-image">
+            <div class="recipe-details">
+                <h3>Yakitori</h3>
+                
+                <span class="cuisine-tag">Japanese</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content login-modal">
+            <span class="close-button">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p class="modal-switch">Don't have an account? <a href="#" id="switchToSignup">Sign Up</a></p>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div id="signupModal" class="modal">
+        <div class="modal-content signup-modal">
+            <span class="close-button">&times;</span>
+            <h2>Sign Up</h2>
+            <form id="signupForm">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <input type="password" placeholder="Confirm Password" required>
+                <button type="submit">Create Account</button>
+            </form>
+            <p class="modal-switch">Already have an account? <a href="#" id="switchToLogin">Login</a></p>
+        </div>
+    </div>
+
+    <!-- Recipe Modal -->
+    <div id="recipeModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
